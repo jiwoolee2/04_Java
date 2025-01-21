@@ -19,6 +19,7 @@ public class VariableEx3 {
 		 */
 		
 		
+		// 값의 범위가 큰 -> 작은 자료형으로 변환(데이터 손실 발생)
 		
 		//[예제1]
 		System.out.println("[강제 형변환 예제 1 - 데이터 손실]");
@@ -83,7 +84,7 @@ public class VariableEx3 {
 		
 		System.out.println("문자(char)<->유니코드(int)");
 		System.out.println("A의 유니코드 번호 : "+ (int)'A'); //65
-		System.out.println("A 뒤에 10번째 문자 : "+ (char)('A'+10)); //k
+		System.out.println("A 뒤에 10번째 문자 : "+ (char)('A'+10)); // K
 		
 		
 		
