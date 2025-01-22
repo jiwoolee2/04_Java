@@ -167,22 +167,24 @@ public class conditionService {
 		
 //		String result = (score>=95 ? "A+" : (score>=90 ? "A" : (score>=85 ? "B+" : (score>=80 ? "B" : (score>=75 ? "C+" : 
 //				(score>=70 ? "C" : (score>=65 ? "D+" : (score>=60 ? "D" : "F"))))))));
-//		
+
 		
 		String result;
 		
+		// Java 지역변수는 초기화 안되면 사용 불가!
+//		System.out.println(result); 오류
+		
 		switch((int)score/5) {
-		
-		
+			
 		case 20, 19: result = "A+"; break;
-		case 18: result = "A"; break;
-		case 17: result = "B+"; break;
-		case 16: result = "B"; break;
-		case 15: result = "C+"; break;
-		case 14: result = "C"; break;
-		case 13: result = "D+"; break;
-		case 12: result = "D"; break;
-		default: result = "F"; break;
+		case 18: result = "A"; 			break;
+		case 17: result = "B+"; 		break;
+		case 16: result = "B"; 			break;
+		case 15: result = "C+"; 		break;
+		case 14: result = "C";		  break;
+		case 13: result = "D+"; 		break;
+		case 12: result = "D"; 			break;
+		default: result = "F"; 			break;
 		}
 		
 		System.out.println("성적 : "+result);
