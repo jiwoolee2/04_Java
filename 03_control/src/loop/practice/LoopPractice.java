@@ -171,7 +171,6 @@ public class LoopPractice {
 			}
 			System.out.println();	
 		}
-
 	}
 	
 	
@@ -194,7 +193,6 @@ public class LoopPractice {
 			}
 			System.out.println();	
 		}
-
 	}
 	
 	/** 문제10
@@ -231,15 +229,17 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		
 		for(int i=1 ; i<=num ; i++) {
-			for(int k=num-i ; k>0 ; k--) {
+			
+			// 앞쪽 공백 추가
+			for(int blank=1 ; blank<=num-i ; blank++) {
 				System.out.print(" ");
 			}
+			// 뒤쪽 별 추가
 			for(int j=1 ; j<=2*i-1 ; j++) {
 				System.out.print('*');
 			}
 			System.out.println();	
 		}
-
 	}
 	
 	/** 문제12
