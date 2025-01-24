@@ -16,8 +16,8 @@ public class Person {
 	public void setName(String name) {
 		
 		// 현재 객체의 필드의 name에 매개변수로 name을 받아서 대입하겠다는 뜻
-		
 		//this.name = name; //여기서 this => 현재 클래스
+		
 		this.PersonName = name; //필드명 변경
 	}
 	
@@ -37,6 +37,4 @@ public class Person {
 		//return "이름 : " + name + " / 키 : "+height;
 		return "이름 : " + PersonName + " / 키 : "+height; //필드명 변경
 	}
-	
-	
 }
