@@ -9,7 +9,6 @@ public class Section02Run {
 		// 학생 객체 생성 2 -> 매개 변수 있는 생성자
 		Student s2 = new Student("홍길동",17,"종로 고등학교");
 		System.out.println(s2.toString());
-		
 		//
 //		s2.equals(s2)
 		
