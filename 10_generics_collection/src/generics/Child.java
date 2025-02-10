@@ -8,6 +8,8 @@ public class Child extends Parent{
 		this.number = number;
 	}
 	
+	public Child() {}
+
 	@Override
 	public String toString() {
 		return super.toString()+"/ number :"+number;
