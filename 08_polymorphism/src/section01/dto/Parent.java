@@ -43,7 +43,7 @@ public class Parent extends Object {
 
 
 	
-	
+
 	/* Object.toString() 오버라이딩*/
 	
 	// [오버라이딩 자동 완성 방법1]

@@ -8,7 +8,6 @@ public class Child extends Parent {
 	// 기본 생성자 생성 -> 접근 제어자 + 클래스명
 	public Child() {
 		super();
-		
 	}
 
   // 매개 변수 있는 생성자
