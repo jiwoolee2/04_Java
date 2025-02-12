@@ -36,7 +36,7 @@ public class ThrowsTest {
 	// --------------------------------------------
 	
 	/* [Unchecked Exception]
-	 * - 예외 발생 여부를 확인하지 않아도 된느 예외
+	 * - 예외 발생 여부를 확인하지 않아도 되는 예외
 	 * == 예외 처리 구문(try-catch,throws)을 안써도 되는 예외
 	 * 
 	 * - RuntimeException의 자식 예외들이 이에 속함

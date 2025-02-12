@@ -63,9 +63,10 @@ public class Member implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", pw=" + pw + ", name=" + name + ", getClass()=" + getClass() + ", hashCode()="
-				+ hashCode() + ", toString()=" + super.toString() + "]";
+		return "Member [id=" + id + ", pw=" + pw + ", name=" + name + "]";
 	}
+
+
 	
 	
 	

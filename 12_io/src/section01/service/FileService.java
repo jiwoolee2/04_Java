@@ -23,7 +23,7 @@ public class FileService {
 	 * boolean  createNewFile()  : 파일 생성
 	 * boolean  delete()         : 파일/디렉토리 삭제
 	 * String   getName()        : 파일 이름 반환
-	 * String   getparent()         : 파일이 저장된 디렉토리 반환
+	 * String   getparent()      : 파일이 저장된 디렉토리 반환
 	 * String   getPath()        : 전체 경로 반환
 	 * boolean  isFile()         : 현재 File 객체가 관리하는게 파일이면 true
 	 * boolean  isDirectory()    : 현재 File 객체가 관리하는게 디렉토리 true

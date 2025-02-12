@@ -9,6 +9,8 @@ public class ObjectRun {
 		ObjectService service = new ObjectService();
 		
 //		service.outputMember();
-		service.inputMember();
+//		service.inputMember();
+//		service.outputMemberList();
+		service.inputMemberList();
 	}
 }
