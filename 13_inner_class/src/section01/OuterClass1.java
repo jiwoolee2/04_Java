@@ -24,9 +24,6 @@ public class OuterClass1 {
 	
 	
 	
-	
-	
-	
 	/* 인스턴스 내부 클래스 정의 == OuterClass1의 멤버 */
 	public class InstanceInnerClass {
 		
@@ -41,14 +38,5 @@ public class OuterClass1 {
 		}
 		
 	}
-		
-		
-	
-	
-	
-	
-	
-	
-	
 	
 }
