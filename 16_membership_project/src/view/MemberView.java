@@ -163,6 +163,47 @@ public class MemberView {
 	public void updateAmount() throws IOException {
 		System.out.println("\n----- 특정 회원 사용 금액 누적하기 -----\n");
 
+		System.out.print("회원 이름 입력 : ");
+		String name = sc.nextLine();
+		
+		// 회원목록에서 입력한 회원과 이름이 일치하는 회원을 모두 저장하는 리스트
+		List<Member> memberList = service.selectName(name);
+		
+		// 리스트 내에 이름이 일치하는게 없다면 아래 출력
+		if(memberList.isEmpty()) {
+			System.out.println("### 이름이 일치하는 회원이 존재하지 않습니다 ###");
+		}
+		// 리스트 내부의 개수가 하나일 때
+		else if(memberList.size()==1){
+			System.out.print("누적할 금액 입력 :");
+			int amount = sc.nextInt();
+			Member target = memberList.get(0);
+			
+			System.out.println(service.updateAmount(target, amount));
+			
+			
+		}
+		
+		// 리스트 내부의 객체 개수가 2개 이상일 때
+		else {
+			
+			int i = 1;
+			// 리스트 내부에 존재하는 요소의 이름과 번호 출력
+			for(Member mb : memberList) {
+				System.out.printf("%d) %s (%s)\n",i,mb.getName(),mb.getPhone());
+				i += 1;
+			}
+			// 리스트 요소 중 하나 선택
+			System.out.print("선택할 회원의 번호를 입력 : ");
+			int num = sc.nextInt();
+			
+			System.out.print("누적할 금액 입력 :");
+			int amount = sc.nextInt();
+			Member target = memberList.get(num-1);
+			
+			System.out.println(service.updateAmount(target, amount));
+		}
+	
 	}
 	
 	
@@ -172,8 +213,55 @@ public class MemberView {
 	// -----------------------------------------------------------------
 	// [5.회원 정보 수정]
 	public void updateMember() throws IOException {
+		
 		System.out.println("\n----- 회원 정보 수정 -----\n");
 
+		System.out.print("회원 이름 입력 : ");
+		String name = sc.nextLine();
+		
+		
+// 회원목록에서 입력한 회원과 이름이 일치하는 회원을 모두 저장하는 리스트
+		List<Member> memberList = service.selectName(name);
+		
+		// 리스트 내에 이름이 일치하는게 없다면 아래 출력
+		if(memberList.isEmpty()) {
+			System.out.println("### 이름이 일치하는 회원이 존재하지 않습니다 ###");
+		}
+		
+		
+		// 리스트 내부의 개수가 하나일 때
+		else if(memberList.size()==1){
+			System.out.print("수정할 전화번호 입력 :");
+			String phone = sc.nextLine();
+			Member target = memberList.get(0);
+			
+			System.out.println(service.updateMember(target, phone));
+		}
+		
+		
+		// 리스트 내부의 객체 개수가 2개 이상일 때
+		else {
+			System.out.println("*** 대상 회원을 선택 해주세요 ***");
+			System.out.println();
+			
+			int i = 1;
+			// 리스트 내부에 존재하는 요소의 이름과 번호 출력
+			for(Member mb : memberList) {
+				System.out.printf("%d) %s (%s)\n",i,mb.getName(),mb.getPhone());
+				i += 1;
+			}
+			// 리스트 요소 중 하나 선택
+			System.out.print("선택할 회원의 번호를 입력 : ");
+			int num = sc.nextInt();
+			sc.nextLine(); // 입력 버퍼 지우기
+			
+			System.out.print("수정할 전화번호 입력 : ");
+			String phone = sc.nextLine();
+			Member target = memberList.get(num-1);
+			
+			System.out.println(service.updateMember(target, phone));
+		}
+		
 	}
 
 	
@@ -184,15 +272,85 @@ public class MemberView {
 	// [6.회원 탈퇴]
 	public void deleteMember() throws IOException {
 		
+		System.out.println("----- 회원 탈퇴 -----");
+		System.out.println();
+		
+		System.out.print("회원 이름 입력 : ");
+		String name = sc.nextLine();
 		
 		
+    // 회원목록에서 입력한 회원과 이름이 일치하는 회원을 모두 저장하는 리스트
+		List<Member> memberList = service.selectName(name);
+		
+		// 리스트 내에 이름이 일치하는게 없다면 아래 출력
+		if(memberList.isEmpty()) {
+			System.out.println("### 이름이 일치하는 회원이 존재하지 않습니다 ###");
+		}
 		
 		
+		// 리스트 내부의 개수가 하나일 때
+		else if(memberList.size()==1){
+			
+			// target에 객체 넣기
+			Member target = memberList.get(0);
+			
+			// 정말 탈퇴 처리 할 것인지 y/n 입력 받기
+			System.out.print("정말 탈퇴 처리 하시겠습니까? (y/n) : ");
+			char answer = sc.next().charAt(0);
+			
+			// y를 입력하면 탈퇴 처리
+			if(answer=='y') {
+				System.out.println(service.deleteMember(target));
+			} 
+			// n을 입력하면 탈퇴 취소
+			else if(answer=='n') {
+				System.out.println("### 탈퇴 취소 ###");
+			}
+			// y도 n도 아닌 다른 문자 입력 시
+			else {
+				System.out.println("### 잘못 입력 하셨습니다. 다시 시도 해주세요 ###");
+			}
+		}
+		
+		
+		// 리스트 내부의 객체 개수가 2개 이상일 때
+		else {
+			System.out.println("*** 대상 회원을 선택 해주세요 ***");
+			System.out.println();
+			
+			int i = 1;
+			// 리스트 내부에 존재하는 요소의 이름과 번호 출력
+			for(Member mb : memberList) {
+				System.out.printf("%d) %s (%s)\n",i,mb.getName(),mb.getPhone());
+				i += 1;
+			}
+			// 리스트 요소 중 하나 선택
+			System.out.print("선택할 회원의 번호를 입력 : ");
+			int num = sc.nextInt();
+
+			// 정말 탈퇴 처리 할 것인지 y/n 입력 받기
+			System.out.print("정말 탈퇴 처리 하시겠습니까? (y/n) : ");
+			char answer = sc.next().charAt(0);
+			
+			// target에 객체 넣기
+			Member target = memberList.get(num-1);
+			
+			// y를 입력하면 탈퇴 처리
+			if(answer=='y') {
+				System.out.println(service.deleteMember(target));
+			} 
+			// n을 입력하면 탈퇴 취소
+			else if(answer=='n') {
+				System.out.println("### 탈퇴 취소 ###");
+			}
+			// y도 n도 아닌 다른 문자 입력 시
+			else {
+				System.out.println("### 잘못 입력 하셨습니다. 다시 시도 해주세요 ###");
+			}
+
+		}
+
 	}
-	
-	
-	
-	
-	
+
 	
 }

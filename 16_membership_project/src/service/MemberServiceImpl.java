@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /* 왜 Service, Dao 인터페이스를 만들어서 구현했을까?
  * - 인터페이스를 상속 받아 구현하면
@@ -100,11 +101,21 @@ public class MemberServiceImpl implements MemberService{
     @Override
     public String updateAmount(Member target, int acc) throws IOException {
 
-        return null; // 결과 문자열 반환
-        
-        //ex)
-        // 2000 -> 100000
-        // * 골드 * 등급으로 변경 되셨습니다
+    	int beforeAmount = target.getAmount(); // 이전 금액
+    	int afterAmount = beforeAmount+acc;    // 바뀐 금액
+    	
+    	// 객체에 금액 누적
+    	target.setAmount(afterAmount);
+    	
+    	String str = "";
+    	if(afterAmount>1000000 && beforeAmount<1000000) {
+    		str = "* 다이아 * 등급으로 변경 되셨습니다";
+    	} 
+    	else if(afterAmount>100000 && beforeAmount<100000) {
+    		str = "* 골드 * 등급으로 변경 되셨습니다";
+    	}
+        return String.format("%d -> %d\n"
+        		+ "%s",beforeAmount,afterAmount,str);
     }
 
 
@@ -114,12 +125,15 @@ public class MemberServiceImpl implements MemberService{
     //회원 정보(전화번호) 수정
     @Override
     public String updateMember(Member target, String phone) throws IOException {
-
-        return null; // 결과 문자열 반환
-        
-        // ex)
-        // 홍길동님의 전화번호가 변경 되었습니다
-        // 01012341234 -> 01044445555
+    		
+    	String beforePhone = target.getPhone();
+    	String afterPhone = phone;
+    	String name = target.getName();
+    	
+    	target.setPhone(afterPhone);
+    	
+        return String.format("%s님의 전화번호가 변경 되었습니다\n"
+        		+ "%s -> %s",name,beforePhone,afterPhone);
     }
 
     
@@ -129,15 +143,32 @@ public class MemberServiceImpl implements MemberService{
     // 회원 탈퇴
     @Override
     public String deleteMember(Member target) throws IOException {
-
-
-        return null; // 결과 문자열 반환
-        // ex)
-        // "홍길동 회원이 탈퇴 처리 되었습니다"
+    	
+			dao.getMemberList().remove(target);
+      return String.format("%s 회원이 탈퇴 처리 되었습니다",target.getName());
     }
+    
+    
 
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
 }
