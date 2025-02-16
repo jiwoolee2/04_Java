@@ -14,21 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/dao/MemberDAO.java</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Users/user1/Downloads/MemberDAO.java</locationURI>
-		</link>
-		<link>
-			<name>src/dto/Member.java</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Users/user1/Downloads/Member.java</locationURI>
-		</link>
-		<link>
-			<name>src/service/MemberService.java</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Users/user1/Downloads/MemberService.java</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
