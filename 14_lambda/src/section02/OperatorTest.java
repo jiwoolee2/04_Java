@@ -23,7 +23,7 @@ public class OperatorTest {
 				
 		System.out.println(addString.apply("맹구"));
 		
-		// IntBinary/Operator : int 매개 변수 2개를 전달 받아 int 반환
+		// IntBinaryOperator : int 매개 변수 2개를 전달 받아 int 반환
 		
 		IntBinaryOperator square = (a, x) -> {
 			int result = 1;
