@@ -22,7 +22,9 @@ public class OuterClass3 {
 				// 외부 클래스의 멤버변수, 지역 변수 접근 가능!
 				System.out.println(instanceMessage + localMessage);
 			}
+			
 		}
+		
 		
 		/* 지역 내부 클래스를 이용해 객체 생성 */
 		LocalInnerClass inner = new LocalInnerClass();
@@ -36,24 +38,5 @@ public class OuterClass3 {
 		// 오류 발생!
 		// LocalInnerClass inner = new LocalInnerClass();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

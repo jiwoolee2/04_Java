@@ -55,16 +55,5 @@ public class Main4 {
 		cat.move();
 		cat.eat();
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }

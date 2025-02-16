@@ -19,22 +19,6 @@ public class Main2 {
 		//inner.staticDisplay();
 		//참조변수를 이용한 static 호출 권장 X
 		OuterClass2.StaticInnerClass.staticDisplay();
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 	}
 }
