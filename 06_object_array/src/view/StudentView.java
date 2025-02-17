@@ -1,6 +1,7 @@
 package view;
 
-import java.util.Scanner;import dto.StudentDTO;
+import java.util.Scanner;
+import dto.StudentDTO;
 import service.StudentService;
 
 /* View

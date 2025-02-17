@@ -14,5 +14,4 @@ public class TextBox<T extends Parent> {
 		this.obj = obj;
 	}
 	
-	
 }
