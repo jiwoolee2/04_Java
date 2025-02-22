@@ -122,8 +122,8 @@ public class TodoListView {
 	 */
 	private void todoListFullView() {
 		
-		System.out.println("\n===[1. Todo List Full View]===\n");
-		System.out.println(service.todoList());
+		System.out.println("\n===============[1. Todo List Full View]===============\n");
+		
 		
 		
 	}
@@ -138,7 +138,7 @@ public class TodoListView {
 	 */
 	private void todoDetailView() throws NumberFormatException, IOException {
 		
-		System.out.println("\n===[2. Todo Detail View]===\n");
+		System.out.println("\n===============[2. Todo Detail View]===============\n");
 		
 		
 	}
@@ -153,7 +153,7 @@ public class TodoListView {
 	 */
 	private void todoAdd() throws IOException {
 		
-		System.out.println("\n===[3. Todo Add]===\n");
+		System.out.println("\n===============[3. Todo Add]===============\n");
 		
 	}
 	
@@ -166,7 +166,7 @@ public class TodoListView {
 	 * @throws NumberFormatException 
 	 */
 	private void todoComplete() throws NumberFormatException, IOException {
-		System.out.println("\n===[4. Todo Complete]===\n");
+		System.out.println("\n===============[4. Todo Complete]===============\n");
 		
 	}
 	
@@ -180,7 +180,7 @@ public class TodoListView {
 	 * @throws NumberFormatException 
 	 */
 	private void todoUpdate() throws NumberFormatException, IOException {
-		System.out.println("\n===[5. Todo Update]===\n");
+		System.out.println("\n===============[5. Todo Update]===============\n");
 		
 	}
 	
@@ -189,7 +189,7 @@ public class TodoListView {
 	// ------------------------------------------------------------------------------------------------------	
 	
 	private void todoDelete() throws NumberFormatException, IOException {
-		System.out.println("\n===[6. Todo Delete]===\n");
+		System.out.println("\n===============[6. Todo Delete]===============\n");
 		
 		
 	}
