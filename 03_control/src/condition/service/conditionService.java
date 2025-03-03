@@ -98,6 +98,7 @@ public class conditionService {
 	 */
 	public void displayMenu() {
 		
+		
 		System.out.println("1. method1()");
 		System.out.println("2. method2()");
 		System.out.println("3. method3()");
