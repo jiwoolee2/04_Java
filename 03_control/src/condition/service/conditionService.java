@@ -116,9 +116,6 @@ public class conditionService {
 	}
 	
 	
-	
-	
-	
 	/** [성적 판별기]
 	 * <pre>
 	 * 중간고사, 기말고사, 과제 점수를 입력 받아 성적 부여
